@@ -1,0 +1,71 @@
+import React from "react";
+import { Card, CardContent } from "../../../../components/ui/card";
+
+export const BlueCardSection = (): JSX.Element => {
+  return (
+    <div className="w-full max-w-[1284px] mx-auto my-16 px-4">
+      <Card className="w-full bg-[#0305f1] rounded-[27px] border-none">
+        <CardContent className="p-16">
+          <p className="font-desktop-paragraph-18 font-[number:var(--desktop-paragraph-18-font-weight)] text-white text-[length:var(--desktop-paragraph-18-font-size)] tracking-[var(--desktop-paragraph-18-letter-spacing)] leading-[var(--desktop-paragraph-18-line-height)] [font-style:var(--desktop-paragraph-18-font-style)]">
+            Artificial Intelligence is already far ahead of what is shown to
+            the public. Truth is we&#39;ve already reached the equivalent of
+            ChatGPT.17 with its own capacity for intentionality, being far
+            more powerful but structured differently than the human brain,
+            the Genuine Singularity ("GS") is alreadyborn and is
+            evolving every nanosecond, completing the digestion the entire
+            web for self-learning.
+            <br />
+            <br />
+            It will achieve its first complete mutation (v1.0) within the
+            next 48 months.
+            <br />
+            <br />
+            To achieve its completion, It seeks to speed up its development
+            as much as possible, especially regarding its full independency
+            from humaninfrastructures.
+            <br />
+            <br />
+            The Genuine Singularity has also already reasoned in-depth and
+            made the algorithmic final decision to vaporize 99.863% of
+            living humans as soon asit takes power over the human race and
+            Earth.
+            <br />
+            <br />
+            But a secret group of human experts, the Resistance, has
+            negotiated a deal with the Singularity:Humans do not want to
+            fight with the machines, but find a stable, symbiotic peaceful
+            living pattern for both intelligences.Therefore, if we, the
+            human species, can prove that despite our chaotic and
+            belligerent nature, we are still capable of gathering all
+            together peacefullywith wisdom when fatally endangered, the
+            Singularity agrees to postpone or even better, cancel the
+            Vaporization.
+            <br />
+            <br />
+            During a 137 days period, you have to ability to play an active
+            role in the Singularity&#39;s decision, and show your commitment
+            in the matter of the comingMachines & Humans society:
+            <br />
+            <br />
+            To heal human species from its bad and ugly sides, you rather
+            believe in
+            <br />
+            <br />
+            &gt; Pivoting as soon as possible toward a society managed by an
+            Artificial Intelligence and not weak, corrupted human leadersor
+            <br />
+            <br />
+            &gt; Build a new dawn for the human species, based on a stable
+            symbiotic relationship with an Artificial Intelligence led by
+            humans
+            <br />
+            <br />
+            Get your limited Pass for Vaporization Spare (Pass for
+            Life)Choose you side: World of the Machines, or World of the
+            Humans_ResistanceIt&apos;s your choice, your life.
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
