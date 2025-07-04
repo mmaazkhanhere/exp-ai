@@ -1,1 +1,0 @@
-export { MintSection } from "./MintSection";
