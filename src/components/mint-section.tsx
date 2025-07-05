@@ -15,19 +15,19 @@ const MintSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto text-center px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      <div className="relative z-10 max-w-[872px] mx-auto text-center px-4">
+        <h2 className="text-4xl md:text-5xl mb-6 font-['BankGothic']">
           Mint your limited OG Pass now
         </h2>
 
-        <p className="text-base md:text-lg text-gray-200 leading-relaxed mb-10 max-w-[744px] mx-auto">
+        <p className="text-sm md:text-base text-gray-200 leading-relaxed mb-10 max-w-[744px] mx-auto font-['Franie']">
           Embrace the future of digital currency with Mint. Discover a seamless
           and decentralized financial landscape that empowers your financial
           freedom. Own your digital assets and explore new possibilities. Join
           Mint now and unlock the limitless potential of cryptocurrency.
         </p>
 
-        <button className="px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] hover:opacity-90 transition-opacity">
+        <button className="px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] hover:opacity-90 transition-opacity font-['Franie']">
           Mint OG Pass now
         </button>
       </div>

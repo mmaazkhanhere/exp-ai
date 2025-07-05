@@ -32,7 +32,7 @@ const Footer = () => {
               <img
                 src="/logo.png"
                 alt="TheXP Logo"
-                className="w-20 h-auto"
+                className="w-30 h-auto"
                 width={78}
                 height={31}
               />
@@ -46,7 +46,9 @@ const Footer = () => {
 
           {/* Section links */}
           <div className="md:col-span-2">
-            <h3 className="text-white font-medium mb-4">Section</h3>
+            <h3 className="text-white font-medium mb-4 font-['BankGothic'] text-2xl">
+              Section
+            </h3>
             <ul className="space-y-3">
               {sectionLinks.map((link, index) => (
                 <li key={index}>
@@ -63,7 +65,9 @@ const Footer = () => {
 
           {/* Contact Us */}
           <div className="md:col-span-3">
-            <h3 className="text-white font-medium mb-4">Contact Us</h3>
+            <h3 className="text-white font-medium mb-4 font-['BankGothic'] text-2xl">
+              Contact Us
+            </h3>
             <ul className="space-y-3">
               {contactLinks.map((link, index) => (
                 <li key={index}>
@@ -82,7 +86,9 @@ const Footer = () => {
 
           {/* Helpful Links */}
           <div className="md:col-span-3">
-            <h3 className="text-white font-medium mb-4">Helpful Links</h3>
+            <h3 className="text-white font-medium mb-4 font-['BankGothic'] text-2xl">
+              Helpful Links
+            </h3>
             <ul className="space-y-3">
               {helpfulLinks.map((link, index) => (
                 <li key={index}>

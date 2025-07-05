@@ -1,0 +1,36 @@
+/* src/assets/styles/fonts.css (or your main CSS file) */
+
+@font-face {
+  font-family: "BankGothic";
+  src: url("../assets/fonts/bankgothic/BankGothicBold.ttf") format("truetype");
+  font-weight: bold; /* Use 'bold' or 700 for the bold version */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BankGothic";
+  src: url("../assets/fonts/bankgothic/BankGothicMediumBT.ttf")
+    format("truetype");
+  font-weight: 500; /* Use a distinct weight like 500 or 600 for medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Franie";
+  src: url("../assets/fonts/franie/FranieVariableTest-Regular-BF64c31f3d73b64.otf")
+    format("opentype");
+  font-weight: normal; /* Typically 'normal' or 400 for regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Franie";
+  src: url("../assets/fonts/franie/FranieVariableTest-Light-BF64c31f3dc06e0.otf")
+    format("opentype");
+  font-weight: lighter; /* Typically 'normal' or 400 for regular */
+  font-style: normal;
+  font-display: swap;
+}

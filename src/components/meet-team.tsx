@@ -90,9 +90,9 @@ const MeetTeam = () => {
     <section className="w-full px-[120px] py-40 flex flex-col items-center gap-32">
       {/* Team Header */}
       <div className="flex flex-col items-center justify-center gap-8 max-w-[1002px] text-center">
-        <h2 className="text-6xl font-bold">Meet Our Dream Team</h2>
+        <h2 className="text-6xl font-['BankGothic']">Meet Our Dream Team</h2>
 
-        <p className="max-w-[744px] text-sm">
+        <p className="max-w-[744px] text-sm font-['Franie']">
           World Of The Machines is a refined complex project, requesting
           expertise from numerous fields: AI, 3D, mechanical systems, product
           design, watchmaking expertise, Near Field Chips, Tokenomics, Gaming...
@@ -111,7 +111,9 @@ const MeetTeam = () => {
 
       {/* Partners Section */}
       <div className="flex flex-col items-center gap-[72px] w-full">
-        <h2 className="max-w-[1002px] text-6xl font-bold">Partners</h2>
+        <h2 className="max-w-[1002px] text-5xl font-bold font-['BankGothic']">
+          Partners
+        </h2>
 
         {/* Partners Grid */}
         <div className="grid grid-cols-3 n gap-[128px] w-full">
@@ -134,9 +136,11 @@ const MeetTeam = () => {
 
       {/* Contact Section */}
       <div className="flex flex-col items-center justify-center gap-8 max-w-[1002px]">
-        <h2 className="font-bold text-6xl">Let&#39;s Connect</h2>
+        <h2 className="font-bold text-5xl font-['BankGothic']">
+          Let&#39;s Connect
+        </h2>
 
-        <p className="max-w-[744px] font-paragraph-regular font-[number:var(--paragraph-regular-font-weight)] text-grey-100 text-[length:var(--paragraph-regular-font-size)] text-center tracking-[var(--paragraph-regular-letter-spacing)] leading-[var(--paragraph-regular-line-height)] [font-style:var(--paragraph-regular-font-style)]">
+        <p className="max-w-[744px] text-center font-['Franie']">
           We would love to hear from you. Whether you have questions,
           partnership opportunities, or simply want to learn more about
           TheExperience.
@@ -147,7 +151,7 @@ const MeetTeam = () => {
           asChild
         >
           <a
-            className="[font-family:'Franie-Bold',Helvetica] font-bold text-genericwhite text-lg tracking-[0] leading-[27px] underline whitespace-nowrap"
+            className="[font-family:'Franie-Bold',Helvetica] font-bold text-genericwhite text-lg tracking-[0] leading-[27px] underline whitespace-nowrap font-['Franie']"
             href="mailto:contact@thexp.ai"
             rel="noopener noreferrer"
             target="_blank"

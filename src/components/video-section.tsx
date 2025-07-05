@@ -23,7 +23,7 @@ const VideoSection = () => {
           </div>
         </div>
 
-        <button className="flex-1 px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] w-full text-lg font-bold cursor-pointer hover:scale-105">
+        <button className="flex-1 font-['Franie'] px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] w-full text-lg font-bold cursor-pointer hover:scale-105">
           Trailer
         </button>
       </div>

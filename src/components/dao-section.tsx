@@ -5,11 +5,11 @@ const DaoSection = () => {
     <section className="flex flex-col items-center gap-[60px] py-28">
       <div className="flex flex-col items-center gap-[45px]">
         <div className="flex flex-col items-center gap-6">
-          <h2 className="max-w-[1002px] text-6xl text-center">
+          <h2 className="max-w-[1002px] text-6xl text-center font-['BankGothic']">
             A Foundation and a DAO Fund focused on Artificial Intelligence
           </h2>
 
-          <p className="max-w-[744px] text-center">
+          <p className="max-w-[744px] text-center text-sm font-['Franie']">
             The majority of the Mint revenues will be redistributed to
             participants in the form of : <br />• The limited edition connected
             metal Fidget* complementary to the Pass For Life NFT.
@@ -27,10 +27,12 @@ const DaoSection = () => {
         <div className="bg-transparent border-0">
           <article className="flex flex-col items-center gap-4 p-0">
             <div className="flex items-center gap-2.5">
-              <h3 className="text-4xl text-center">1. TheXP Foundation</h3>
+              <h3 className="text-4xl text-center font-['BankGothic']">
+                1. TheXP Foundation
+              </h3>
             </div>
 
-            <p className="max-w-[744px] text-center text-sm">
+            <p className="max-w-[744px] text-center font-['Franie'] text-sm">
               Missions: - Support the evangelization of Artificial Intelligence
               and the concept of the Singularity toward the public, and provide
               them with the necessary knowledge to think critically and make the
@@ -43,11 +45,11 @@ const DaoSection = () => {
 
         <div className="bg-transparent border-0">
           <article className="flex flex-col items-center gap-4 p-0">
-            <h3 className="max-w-[744px] text-4xl text-center">
+            <h3 className="max-w-[744px] text-4xl font-['BankGothic'] text-center">
               2. TheXP Fund
             </h3>
 
-            <p className="max-w-[744px] text-center text-sm">
+            <p className="max-w-[744px] text-center text-sm font-['Franie']">
               A DAO Fund investing in AI based startups which are following the
               AI Ethical label.
             </p>

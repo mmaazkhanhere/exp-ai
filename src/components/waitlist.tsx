@@ -11,10 +11,10 @@ const WaitList = () => {
     >
       <div className="container mx-auto max-w-7xl flex flex-col items-center">
         <div className="max-w-3xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-['BankGothic']">
             JOIN THE Wishlist
           </h1>
-          <p className="text-lg text-gray-200 mb-10">
+          <p className="text-lg text-gray-200 mb-10 font-['Franie']">
             I'm In! Keep me informed about the project.
           </p>
 
@@ -26,7 +26,7 @@ const WaitList = () => {
             />
           </div>
 
-          <button className="px-10 py-5 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-medium hover:opacity-90 transition-opacity">
+          <button className="px-10 py-5 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-medium hover:opacity-90 transition-opacity font-['Franie']">
             Elevate My Experience
           </button>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 const BlueCardSection = () => {
   return (
     <div className="w-full max-w-[1284px] mx-auto py-16 px-[77px] bg-[#0305f1] rounded-[27px]">
-      <p className=" text-white text-[18px]">
+      <p className=" text-white text-[16px] font-['Franie']">
         Artificial Intelligence is already far ahead of what is shown to the
         public. Truth is we&#39;ve already reached the equivalent of ChatGPT.17
         with its own capacity for intentionality, being far more powerful but

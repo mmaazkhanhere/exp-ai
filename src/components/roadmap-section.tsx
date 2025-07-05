@@ -68,14 +68,18 @@ const roadmapItems = [
 const RoadMapSection = () => {
   return (
     <section className="relative w-full bg-[#010116] pt-20">
+      <div className="absolute w-full -top-[1000px]">
+        <img src="/lava_roadmap.png" alt="Gradient" />
+      </div>
+
       {/* Header content */}
       <div className="flex flex-col items-center justify-center gap-10 relative z-10 mx-auto max-w-[1002px] ">
-        <h2 className="text-6xl text-center">
+        <h2 className="text-5xl text-center font-['BankGothic']">
           137 days to save Humanity and create a peaceful bond with the incoming
           Singularity
         </h2>
 
-        <p className="max-w-[744px] text-gray-200 text-center">
+        <p className="max-w-[744px] text-gray-200 text-center font-['Franie']">
           Enter this fascinating adventure, and commit yourself to the
           reflection about how the human species should prepare itself to the
           exponential growth of Artificial Intelligence in its society and the
@@ -95,7 +99,7 @@ const RoadMapSection = () => {
           }}
         ></div>
 
-        <div className="relative z-10">
+        <div className="relative z-20">
           {roadmapItems.slice(0, 7).map((item, index) => {
             // Determine dot color
             let dotColor = "bg-gray-500";
@@ -112,12 +116,14 @@ const RoadMapSection = () => {
               >
                 {item.position === "left" ? (
                   <>
-                    <div className="flex-1 border-2 border-solid border-[#9898a0] backdrop-blur-[35px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(35px)_brightness(100%)] bg-[rgba(255,255,255,0.1)] rounded-lg text-white">
+                    <div className="flex-1 border-2 border-solid border-[#9898a0] backdrop-blur-[35px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(35px)_brightness(100%)] bg-[rgba(255,255,255,0.1)] rounded-lg text-white z-20">
                       <article className="flex flex-col items-start gap-4 p-10">
-                        <h3 className="font-desktop-h3-title text-white ">
+                        <h3 className=" text-white font-['BankGothic'] text-2xl">
                           {item.title}
                         </h3>
-                        <p className="">{item.description}</p>
+                        <p className="font-['Franie'] text-sm">
+                          {item.description}
+                        </p>
                       </article>
                     </div>
 
@@ -127,7 +133,9 @@ const RoadMapSection = () => {
 
                     <div className="flex flex-col items-start gap-2.5 flex-1">
                       <div className="px-10 py-5 bg-[#0305f1] text-white rounded-lg">
-                        <span className="">{item.date}</span>
+                        <span className="font-['BankGothic'] text-xl">
+                          {item.date}
+                        </span>
                       </div>
                     </div>
                   </>
@@ -141,7 +149,9 @@ const RoadMapSection = () => {
                             : "bg-[#0305f1]"
                         } text-white rounded-lg`}
                       >
-                        <span className="">{item.date}</span>
+                        <span className="font-['BankGothic'] text-xl">
+                          {item.date}
+                        </span>
                       </div>
                     </div>
 
@@ -151,8 +161,12 @@ const RoadMapSection = () => {
 
                     <div className="flex-1 border-2 border-solid border-[#9898a0] backdrop-blur-[35px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(35px)_brightness(100%)] bg-[rgba(255,255,255,0.1)] rounded-lg">
                       <article className="flex flex-col items-start gap-4 p-10">
-                        <h3 className="">{item.title}</h3>
-                        <p className="">{item.description}</p>
+                        <h3 className="font-['BankGothic'] text-2xl">
+                          {item.title}
+                        </h3>
+                        <p className="font-['Franie'] text-sm">
+                          {item.description}
+                        </p>
                       </article>
                     </div>
                   </>
@@ -162,12 +176,23 @@ const RoadMapSection = () => {
           })}
 
           {/* Final milestone (centered) */}
-          <div className="flex flex-col items-center gap-10 mt-[120px] relative">
-            <div className="relative bg-[#0305f1] border-[#ede7ff] w-9 h-9 rounded-[18px] border-[6px] border-solid" />
-            <div className="w-[519px] bg-[#0305f1] shadow-[0px_4px_150px_#0305f180] rounded-lg">
+          <div className="flex flex-col items-center gap-10 mt-[120px] relative z-10">
+            {/* Background image for final milestone - Fixed positioning */}
+            <div className="absolute w-full h-full top-0 flex justify-center items-center -z-10 -right-[345px]">
+              <img
+                src="/lava_dao.png"
+                alt="Gradient"
+                className="object-contain w-[600px] max-w-none opacity-70 scale-125"
+              />
+            </div>
+
+            <div className="relative bg-[#0305f1] border-[#ede7ff] w-9 h-9 rounded-[18px] border-[6px] border-solid z-20" />
+            <div className="w-[519px] bg-[#0305f1] shadow-[0px_4px_150px_#0305f180] rounded-lg z-20">
               <article className="flex flex-col items-start gap-4 p-10">
-                <h3 className="">29 February 2024</h3>
-                <p className="font-medium text-grey-100 text-[15px] leading-[22.5px]">
+                <h3 className="text-2xl font-['BankGothic']">
+                  29 February 2024
+                </h3>
+                <p className="font-medium font-['Franie'] text-grey-100 text-[15px] leading-[22.5px]">
                   Rewards announcement (Winners Leaderboard), and final
                   distribution
                 </p>

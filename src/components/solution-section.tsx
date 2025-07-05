@@ -44,8 +44,12 @@ const SolutionSection = () => {
             >
               <div className="text-4xl font-bold mb-6">{card.id}</div>
               <div className="flex flex-col gap-6 w-full">
-                <h3 className="text-2xl font-bold">{card.title}</h3>
-                <p className="text-lg leading-relaxed">{card.description}</p>
+                <h3 className="text-3xl font-bold font-['BankGothic']">
+                  {card.title}
+                </h3>
+                <p className="text-sm font-['Franie'] text-left">
+                  {card.description}
+                </p>
               </div>
             </article>
           ))}
