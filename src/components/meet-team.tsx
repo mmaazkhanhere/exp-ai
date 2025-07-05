@@ -87,12 +87,14 @@ const MeetTeam = () => {
     },
   ];
   return (
-    <section className="w-full px-[120px] py-40 flex flex-col items-center gap-32">
+    <section className="w-full px-4 sm:px-6 md:px-8 lg:px-[60px] xl:px-[120px] py-10 md:py-24 lg:py-32 xl:py-40 flex flex-col items-center gap-10 md:gap-24 lg:gap-32">
       {/* Team Header */}
-      <div className="flex flex-col items-center justify-center gap-8 max-w-[1002px] text-center">
-        <h2 className="text-6xl font-['BankGothic']">Meet Our Dream Team</h2>
+      <div className="flex flex-col items-center justify-center gap-4 md:gap-8 max-w-4xl xl:max-w-[1002px] text-center">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-['BankGothic']">
+          Meet Our Dream Team
+        </h2>
 
-        <p className="max-w-[744px] text-sm font-['Franie']">
+        <p className="max-w-full sm:max-w-2xl lg:max-w-[744px] text-xs sm:text-sm md:text-base font-['Franie']">
           World Of The Machines is a refined complex project, requesting
           expertise from numerous fields: AI, 3D, mechanical systems, product
           design, watchmaking expertise, Near Field Chips, Tokenomics, Gaming...
@@ -101,10 +103,14 @@ const MeetTeam = () => {
       </div>
 
       {/* Team Members Grid */}
-      <div className="grid grid-cols-3 justify-between gap-[128px] w-full max-w-[1142px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center md:justify-items-stretch justify-between items-center md:items-start gap-10 md:gap-16 lg:gap-[128px] w-full max-w-[1142px]">
         {teamMembers.map((member, index) => (
           <div key={`team-member-${index}`} className="flex flex-col">
-            <img src={member.img} alt={member.name} />
+            <img
+              src={member.img}
+              alt={member.name}
+              className="w-full max-w-[250px] object-contain"
+            />
           </div>
         ))}
       </div>
@@ -116,20 +122,33 @@ const MeetTeam = () => {
         </h2>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-3 n gap-[128px] w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center md:justify-items-stretch gap-10 md:gap-16 lg:gap-[128px] w-full">
           {partners.map((partner, index) => (
             <div key={`partner-${index}`} className="flex flex-col">
               {partner.img ? (
-                <img src={partner.img} alt={partner.name} />
+                <img
+                  src={partner.img}
+                  alt={partner.name}
+                  className="w-full max-w-[250px] object-contain"
+                />
               ) : null}
             </div>
           ))}
         </div>
 
         {/* Partner Logos */}
-        <div className="w-full flex flex-col items-center gap-2.5">
-          <div className="flex items-center justify-between w-full max-w-[1200px] h-[66.74px]">
-            <img src="/logos.png" alt="Partner Logo" />
+        <div className="w-full flex flex-col items-center gap-2.5 my-4 md:my-8">
+          <div className="flex items-center justify-center md:justify-between w-full max-w-[1200px] h-full md:h-[66.74px]">
+            <img
+              src="/logos.png"
+              alt="Partner Logo"
+              className="hidden md:block"
+            />
+            <img
+              src="/partner_mobile.png"
+              alt="Partner Logo"
+              className="block md:hidden"
+            />
           </div>
         </div>
       </div>
@@ -147,7 +166,7 @@ const MeetTeam = () => {
         </p>
 
         <a
-          className="px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] [font-family:'Franie-Bold',Helvetica] font-bold text-genericwhite text-lg tracking-[0] leading-[27px] whitespace-nowrap font-['Franie'] inline-block"
+          className="px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] font-bold text-generic white text-lg tracking-[0] leading-[27px] whitespace-nowrap font-['Franie'] inline-block text-sm"
           href="mailto:contact@thexp.ai"
           rel="noopener noreferrer"
           target="_blank"

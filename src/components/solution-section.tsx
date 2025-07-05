@@ -33,21 +33,23 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section className="w-full py-16">
-      {/* Centered 1000px container */}
-      <div className="max-w-[1000px] mx-auto border border-white p-8 rounded-lg">
-        <div className="grid grid-cols-2 gap-8 justify-items-center">
+    <section className="w-full py-12 md:py-16 px-6">
+      {/* Responsive container */}
+      <div className="max-w-4xl lg:max-w-5xl xl:max-w-[1000px] mx-auto p-6 md:p-8 rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {solutionCards.map((card) => (
             <article
               key={card.id}
-              className="flex flex-col items-center justify-center text-center w-full max-w-[400px] h-[640px] rounded-lg border-2 border-solid border-[#9898a0] backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)] bg-[linear-gradient(135deg,rgba(245,245,250,0.2)_0%,rgba(255,255,255,0.05)_100%)] p-6"
+              className="flex flex-col items-center justify-start text-center w-full h-auto rounded-lg border-2 border-solid border-[#9898a0] backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)] bg-[linear-gradient(135deg,rgba(245,245,250,0.2)_0%,rgba(255,255,255,0.05)_100%)] p-6"
             >
-              <div className="text-4xl font-bold mb-6">{card.id}</div>
-              <div className="flex flex-col gap-6 w-full">
-                <h3 className="text-3xl font-bold font-['BankGothic']">
+              <div className="text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+                {card.id}
+              </div>
+              <div className="flex flex-col gap-4 md:gap-6 w-full h-full">
+                <h3 className="text-2xl md:text-3xl font-bold font-['BankGothic']">
                   {card.title}
                 </h3>
-                <p className="text-sm font-['Franie'] text-left">
+                <p className="text-xs md:text-sm font-['Franie'] text-left flex-grow">
                   {card.description}
                 </p>
               </div>

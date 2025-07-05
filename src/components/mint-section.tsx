@@ -2,11 +2,11 @@ import React from "react";
 
 const MintSection = () => {
   return (
-    <section className="w-full py-40 relative overflow-hidden bg-black text-white font-sans">
+    <section className="w-full py-20 md:py-30 lg:py-40 relative overflow-hidden bg-black text-white font-sans">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/mintBg.jpg" // <-- Your original image
+          src="/mintBg.jpg"
           alt="OG Pass Background"
           className="w-full h-full object-cover opacity-25 mix-blend-screen"
         />
@@ -15,19 +15,19 @@ const MintSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[872px] mx-auto text-center px-4">
-        <h2 className="text-4xl md:text-5xl mb-6 font-['BankGothic']">
+      <div className="relative z-10 max-w-[872px] mx-auto text-center px-4 sm:px-6">
+        <h2 className="text-4xl md:text-5xl mb-5 md:mb-6 font-['BankGothic']">
           Mint your limited OG Pass now
         </h2>
 
-        <p className="text-sm md:text-base text-gray-200 leading-relaxed mb-10 max-w-[744px] mx-auto font-['Franie']">
+        <p className="text-xs md:text-sm text-gray-200 leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-[744px] mx-auto font-['Franie']">
           Embrace the future of digital currency with Mint. Discover a seamless
           and decentralized financial landscape that empowers your financial
           freedom. Own your digital assets and explore new possibilities. Join
           Mint now and unlock the limitless potential of cryptocurrency.
         </p>
 
-        <button className="px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] hover:opacity-90 transition-opacity font-['Franie']">
+        <button className="px-8 py-4 md:px-10 md:py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] hover:opacity-90 transition-opacity font-['Franie'] text-sm md:text-base">
           Mint OG Pass now
         </button>
       </div>
