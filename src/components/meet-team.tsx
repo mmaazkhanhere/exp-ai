@@ -146,19 +146,14 @@ const MeetTeam = () => {
           TheExperience.
         </p>
 
-        <button
-          className="px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)]"
-          asChild
+        <a
+          className="px-10 py-5 rounded-lg bg-[linear-gradient(270deg,rgba(3,5,241,1)_0%,rgba(1,241,242,1)_100%)] [font-family:'Franie-Bold',Helvetica] font-bold text-genericwhite text-lg tracking-[0] leading-[27px] whitespace-nowrap font-['Franie'] inline-block"
+          href="mailto:contact@thexp.ai"
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          <a
-            className="[font-family:'Franie-Bold',Helvetica] font-bold text-genericwhite text-lg tracking-[0] leading-[27px] underline whitespace-nowrap font-['Franie']"
-            href="mailto:contact@thexp.ai"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            contact@thexp.ai
-          </a>
-        </button>
+          contact@thexp.ai
+        </a>
       </div>
     </section>
   );
