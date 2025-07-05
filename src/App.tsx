@@ -1,11 +1,16 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./components/header";
 import Hero from "./components/hero";
 import TextSection from "./components/text-section";
 import BlueCardSection from "./components/blue-card-section";
 import MintSection from "./components/mint-section";
 import VideoSection from "./components/video-section";
 import SolutionSection from "./components/solution-section";
+import RoadMapDaoSection from "./components/roadmap-dao-section";
+import JoinCommunity from "./components/join-community";
+import MeetTeam from "./components/meet-team";
+import WaitList from "./components/waitlist";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -17,6 +22,11 @@ function App() {
       <MintSection />
       <VideoSection />
       <SolutionSection />
+      <RoadMapDaoSection />
+      <JoinCommunity />
+      <MeetTeam />
+      <WaitList />
+      <Footer />
     </div>
   );
 }
