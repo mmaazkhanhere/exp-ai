@@ -1,9 +1,23 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const BlueCardSection = () => {
   return (
-    <div className="w-[95%] max-w-[1284px] mx-auto py-8 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-[77px] bg-[#0305f1] rounded-xl md:rounded-2xl lg:rounded-[27px]">
-      <p className="text-white text-xs md:text-sm font-['Franie'] leading-relaxed">
+    <motion.div 
+      className="w-[95%] max-w-[1284px] mx-auto py-8 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-[77px] bg-[#0305f1] rounded-xl md:rounded-2xl lg:rounded-[27px]"
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.02 }}
+    >
+      <motion.p 
+        className="text-white text-xs md:text-sm font-['Franie'] leading-relaxed"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
         Artificial Intelligence is already far ahead of what is shown to the
         public. Truth is we've already reached the equivalent of ChatGPT.17 with
         its own capacity for intentionality, being far more powerful but
@@ -55,8 +69,8 @@ const BlueCardSection = () => {
         Get your limited Pass for Vaporization Spare (Pass for Life) Choose your
         side: World of the Machines, or World of the Humans_Resistance It's your
         choice, your life.
-      </p>
-    </div>
+      </motion.p>
+    </motion.div>
   );
 };
 

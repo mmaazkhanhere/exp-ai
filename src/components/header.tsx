@@ -1,6 +1,7 @@
 // src/components/Header.jsx
 import React, { useState, useEffect } from "react";
 import { FaDiscord, FaBars, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,93 +39,153 @@ const Header = () => {
 
   return (
     <>
-      <header
+      <motion.header
         className={`w-full transition-all duration-300 z-50 ${
           isScrolled ? "py-3 bg-gray-900 shadow-lg" : "py-5 bg-transparent"
         }`}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="max-w-[1200px] mx-auto px-4 md:px-[30px] flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <motion.div 
+            className="flex items-center"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+          >
             <img
               className="w-[60px] md:w-[75px] h-auto"
               alt="Logo"
               src="/logo.png"
             />
-          </div>
+          </motion.div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item, index) => (
-              <div key={index} className="group">
+              <motion.div 
+                key={index} 
+                className="group"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -2 }}
+              >
                 <p className="text-gray-200 text-sm font-medium group-hover:text-white transition-colors">
                   {item.text}
                 </p>
                 <div className="h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 w-0 group-hover:w-full transition-all duration-300 mt-0.5"></div>
-              </div>
+              </motion.div>
             ))}
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <div className="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors cursor-pointer">
+            <motion.div 
+              className="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <FaDiscord className="text-white w-5 h-5" />
-            </div>
-            <button className="text-sm w-[124px] h-[45px] bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition-all rounded-lg font-medium">
+            </motion.div>
+            <motion.button 
+              className="text-sm w-[124px] h-[45px] bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition-all rounded-lg font-medium"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Mint Now
-            </button>
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <motion.button
             className="md:hidden text-white z-50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
-            {isMenuOpen ? (
-              <FaTimes className="w-6 h-6" />
-            ) : (
-              <FaBars className="w-6 h-6" />
-            )}
-          </button>
+            <AnimatePresence mode="wait">
+              {isMenuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <FaTimes className="w-6 h-6" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <FaBars className="w-6 h-6" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
         </div>
-      </header>
+      </motion.header>
 
       {/* Mobile Menu */}
-      <div
-        className={`fixed inset-0 bg-gray-900 z-40 transition-all duration-300 md:hidden ${
-          isMenuOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full pointer-events-none"
-        }`}
-      >
-        <div className="flex flex-col h-full pt-24 pb-10 px-6">
-          <nav className="flex flex-col gap-8">
-            {navItems.map((item, index) => (
-              <div
-                key={index}
-                className="border-b border-gray-700 pb-4"
-                onClick={() => setIsMenuOpen(false)}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="fixed inset-0 bg-gray-900 z-40 md:hidden"
+            initial={{ opacity: 0, y: "-100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-100%" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="flex flex-col h-full pt-24 pb-10 px-6">
+              <nav className="flex flex-col gap-8">
+                {navItems.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="border-b border-gray-700 pb-4"
+                    onClick={() => setIsMenuOpen(false)}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    whileHover={{ x: 10 }}
+                  >
+                    <p className="text-gray-200 text-xl font-medium">{item.text}</p>
+                  </motion.div>
+                ))}
+              </nav>
+
+              <motion.div 
+                className="mt-auto flex flex-col gap-6"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
               >
-                <p className="text-gray-200 text-xl font-medium">{item.text}</p>
-              </div>
-            ))}
-          </nav>
-
-          <div className="mt-auto flex flex-col gap-6">
-            <div className="flex justify-center">
-              <div className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors cursor-pointer">
-                <FaDiscord className="text-white w-6 h-6" />
-              </div>
+                <div className="flex justify-center">
+                  <motion.div 
+                    className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors cursor-pointer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <FaDiscord className="text-white w-6 h-6" />
+                  </motion.div>
+                </div>
+                <motion.button 
+                  className="text-base w-full h-[50px] bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition-all rounded-lg font-medium"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Mint Now
+                </motion.button>
+              </motion.div>
             </div>
-            <button className="text-base w-full h-[50px] bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition-all rounded-lg font-medium">
-              Mint Now
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Add padding to content when menu is open */}
-      {isMenuOpen && <div className="h-20 md:hidden"></div>}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
