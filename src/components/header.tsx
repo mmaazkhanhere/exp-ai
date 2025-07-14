@@ -1,5 +1,5 @@
 // src/components/Header.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaDiscord, FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -49,7 +49,7 @@ const Header = () => {
       >
         <div className="max-w-[1200px] mx-auto px-4 md:px-[30px] flex items-center justify-between">
           {/* Logo */}
-          <motion.div 
+          <motion.div
             className="flex items-center"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
@@ -64,8 +64,8 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="group"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -82,14 +82,14 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <motion.div 
+            <motion.div
               className="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <FaDiscord className="text-white w-5 h-5" />
             </motion.div>
-            <motion.button 
+            <motion.button
               className="text-sm w-[124px] h-[45px] bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition-all rounded-lg font-medium"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -154,19 +154,21 @@ const Header = () => {
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     whileHover={{ x: 10 }}
                   >
-                    <p className="text-gray-200 text-xl font-medium">{item.text}</p>
+                    <p className="text-gray-200 text-xl font-medium">
+                      {item.text}
+                    </p>
                   </motion.div>
                 ))}
               </nav>
 
-              <motion.div 
+              <motion.div
                 className="mt-auto flex flex-col gap-6"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
                 <div className="flex justify-center">
-                  <motion.div 
+                  <motion.div
                     className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors cursor-pointer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -174,7 +176,7 @@ const Header = () => {
                     <FaDiscord className="text-white w-6 h-6" />
                   </motion.div>
                 </div>
-                <motion.button 
+                <motion.button
                   className="text-base w-full h-[50px] bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition-all rounded-lg font-medium"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

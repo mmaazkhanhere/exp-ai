@@ -1,9 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const BlueCardSection = () => {
   return (
-    <motion.div 
+    <motion.div
       className="w-[95%] max-w-[1284px] mx-auto py-8 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-[77px] bg-[#0305f1] rounded-xl md:rounded-2xl lg:rounded-[27px]"
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
@@ -11,7 +10,7 @@ const BlueCardSection = () => {
       viewport={{ once: true }}
       whileHover={{ scale: 1.02 }}
     >
-      <motion.p 
+      <motion.p
         className="text-white text-xs md:text-sm font-['Franie'] leading-relaxed"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

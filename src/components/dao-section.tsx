@@ -1,18 +1,17 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const DaoSection = () => {
   return (
     <section className="flex flex-col items-center gap-8 md:gap-12 lg:gap-[60px] py-12 md:py-20 lg:py-28 px-4 sm:px-6">
       <div className="flex flex-col items-center gap-6 md:gap-8 lg:gap-[45px] w-full">
-        <motion.div 
+        <motion.div
           className="flex flex-col items-center gap-4 md:gap-6 w-full"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <motion.h2 
+          <motion.h2
             className="w-full max-w-4xl lg:max-w-[1002px] text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center font-['BankGothic']"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -22,7 +21,7 @@ const DaoSection = () => {
             A Foundation and a DAO Fund focused on Artificial Intelligence
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             className="w-full max-w-2xl lg:max-w-[744px] text-center text-xs md:text-sm font-['Franie']"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +45,7 @@ const DaoSection = () => {
           </motion.p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="bg-transparent border-0 w-full max-w-2xl lg:max-w-[744px]"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -56,7 +55,7 @@ const DaoSection = () => {
         >
           <article className="flex flex-col items-center gap-3 md:gap-4">
             <div className="flex items-center gap-2.5">
-              <motion.h3 
+              <motion.h3
                 className="text-2xl md:text-3xl lg:text-4xl text-center font-['BankGothic']"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +66,7 @@ const DaoSection = () => {
               </motion.h3>
             </div>
 
-            <motion.p 
+            <motion.p
               className="w-full text-center font-['Franie'] text-xs md:text-sm"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +83,7 @@ const DaoSection = () => {
           </article>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="bg-transparent border-0 w-full max-w-2xl lg:max-w-[744px]"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -93,7 +92,7 @@ const DaoSection = () => {
           whileHover={{ scale: 1.02 }}
         >
           <article className="flex flex-col items-center gap-3 md:gap-4">
-            <motion.h3 
+            <motion.h3
               className="w-full max-w-2xl lg:max-w-[744px] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-['BankGothic'] text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +102,7 @@ const DaoSection = () => {
               2. TheXP Fund
             </motion.h3>
 
-            <motion.p 
+            <motion.p
               className="w-full text-center text-xs md:text-sm font-['Franie']"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +117,7 @@ const DaoSection = () => {
       </div>
 
       {/* Chart visualization */}
-      <motion.div 
+      <motion.div
         className="w-full max-w-4xl lg:max-w-[790px] h-auto aspect-[790/552]"
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}

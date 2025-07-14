@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import RoadMapSection from "./roadmap-section";
 import DaoSection from "./dao-section";
@@ -14,16 +13,16 @@ const RoadMapDaoSection = () => {
       >
         <RoadMapSection />
       </motion.div>
-      
-      <motion.img 
-        src="/dao_separator.png" 
+
+      <motion.img
+        src="/dao_separator.png"
         className="pt-10"
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         viewport={{ once: true }}
       />
-      
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

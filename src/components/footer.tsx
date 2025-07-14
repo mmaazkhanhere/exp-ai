@@ -1,5 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion"; // Import easeOut here
 
 const Footer = () => {
   const sectionLinks = [
@@ -41,7 +40,7 @@ const Footer = () => {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: easeOut, // Fix applied here
       },
     },
   };
@@ -50,7 +49,7 @@ const Footer = () => {
     <footer className="bg-[#010116] pt-10 md:pt-16 pb-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Main content grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 md:pb-10 border-b border-gray-700"
           variants={containerVariants}
           initial="hidden"
@@ -58,11 +57,8 @@ const Footer = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           {/* Logo and description - full width on mobile */}
-          <motion.div 
-            className="md:col-span-4"
-            variants={itemVariants}
-          >
-            <motion.div 
+          <motion.div className="md:col-span-4" variants={itemVariants}>
+            <motion.div
               className="mb-4 flex justify-center md:justify-start"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
@@ -75,7 +71,7 @@ const Footer = () => {
                 height={31}
               />
             </motion.div>
-            <motion.p 
+            <motion.p
               className="text-gray-300 text-xs sm:text-sm text-center md:text-left max-w-md mx-auto md:mx-0"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -89,11 +85,8 @@ const Footer = () => {
           </motion.div>
 
           {/* Section links - 2 columns on mobile */}
-          <motion.div 
-            className="md:col-span-2"
-            variants={itemVariants}
-          >
-            <motion.h3 
+          <motion.div className="md:col-span-2" variants={itemVariants}>
+            <motion.h3
               className="text-white font-medium mb-3 md:mb-4 font-['BankGothic'] text-xl md:text-2xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -104,8 +97,8 @@ const Footer = () => {
             </motion.h3>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2 sm:gap-y-3 md:block md:space-y-3">
               {sectionLinks.map((link, index) => (
-                <motion.li 
-                  key={index} 
+                <motion.li
+                  key={index}
                   className="text-center md:text-left"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -125,11 +118,8 @@ const Footer = () => {
           </motion.div>
 
           {/* Contact Us */}
-          <motion.div 
-            className="md:col-span-3"
-            variants={itemVariants}
-          >
-            <motion.h3 
+          <motion.div className="md:col-span-3" variants={itemVariants}>
+            <motion.h3
               className="text-white font-medium mb-3 md:mb-4 font-['BankGothic'] text-xl md:text-2xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -140,8 +130,8 @@ const Footer = () => {
             </motion.h3>
             <ul className="space-y-2 sm:space-y-3">
               {contactLinks.map((link, index) => (
-                <motion.li 
-                  key={index} 
+                <motion.li
+                  key={index}
                   className="text-center md:text-left"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -163,11 +153,8 @@ const Footer = () => {
           </motion.div>
 
           {/* Helpful Links */}
-          <motion.div 
-            className="md:col-span-3"
-            variants={itemVariants}
-          >
-            <motion.h3 
+          <motion.div className="md:col-span-3" variants={itemVariants}>
+            <motion.h3
               className="text-white font-medium mb-3 md:mb-4 font-['BankGothic'] text-xl md:text-2xl text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -178,7 +165,7 @@ const Footer = () => {
             </motion.h3>
             <ul className="flex flex-col items-center md:items-start space-y-2 sm:space-y-3">
               {helpfulLinks.map((link, index) => (
-                <motion.li 
+                <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -199,7 +186,7 @@ const Footer = () => {
         </motion.div>
 
         {/* Copyright */}
-        <motion.div 
+        <motion.div
           className="pt-4 md:pt-6 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
